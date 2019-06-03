@@ -22,21 +22,7 @@ class TTT {
         this.render();
     }
 
-    calculateWinner() {
-        for (let i = 0; i < this.lines.length; i++) {
-            const [a, b, c] = this.lines[i];       
-            if (this.squares[a] && 
-            this.squares[a] === this.squares[b] && 
-            this.squares[a] === this.squares[c]) {
-                this.winner = this.squares[a];
-                this.winningLine = this.lines[i];
-                return true;
-            }
-        }
-        this.winner = null;
-        this.winningLine = Array();
-        return false;
-    }
+
   
     handleClick(i) {
         this.squares[i] = this.xIsNext ? 'X' : 'O';
